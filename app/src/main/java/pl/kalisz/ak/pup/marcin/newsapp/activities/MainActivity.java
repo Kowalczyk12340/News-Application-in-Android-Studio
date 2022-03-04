@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
         setContentView(R.layout.activity_main);
         context = this;
         ButterKnife.bind(this);
-        countrys = getResources().getStringArray(R.array.countrys);
-        countrysIcons = getResources().obtainTypedArray(R.array.countrysIcons);
+        countrys = getResources().getStringArray(R.array.countries);
+        countrysIcons = getResources().obtainTypedArray(R.array.countriesIcons);
 
         initToolbar();
 
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
     }
 
     private int getLanguagePosition(String displayLanguage) {
-        String[] codes = getResources().getStringArray(R.array.countrysCodes);
+        String[] codes = getResources().getStringArray(R.array.countriesCodes);
         for (int i = 0; i < codes.length; i++) {
             if (codes[i].equals(displayLanguage)) return i;
         }
@@ -129,8 +129,8 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
                 .setPositiveButton(R.string.ok, (dialog, whichButton) -> {
                     int selectedPosition = ((AlertDialog) dialog).getListView().getCheckedItemPosition();
                     pref.edit().putInt(countryPositionPref, selectedPosition).apply();
-                    pref.edit().putString(Util.COUNTRY_PREF, getResources().getStringArray(R.array.countrysCodes)[selectedPosition]).apply();
-                    LocaleHelper.setLocale(MainActivity.this, getResources().getStringArray(R.array.countrysCodes)[selectedPosition]);
+                    pref.edit().putString(Util.COUNTRY_PREF, getResources().getStringArray(R.array.countriesCodes)[selectedPosition]).apply();
+                    LocaleHelper.setLocale(MainActivity.this, getResources().getStringArray(R.array.countriesCodes)[selectedPosition]);
                     recreate();
                     dialog.dismiss();
                 })

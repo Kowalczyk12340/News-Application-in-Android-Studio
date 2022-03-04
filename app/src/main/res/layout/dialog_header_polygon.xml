@@ -2,7 +2,6 @@
 <layout xmlns:bind="http://schemas.android.com/tools">
 
     <data class="NewsDialogBinding">
-
         <variable
             name="listener"
             type="pl.kalisz.ak.pup.marcin.newsapp.clicklisteners.NewsDialogClickListeners" />
@@ -91,12 +90,8 @@
                     android:onClick="@{()-> listener.onGotoWebSiteClick(news.newsUrl)}"
                     android:text="@string/goto_website"
                     android:textColor="@color/colorPrimary" />
-
             </LinearLayout>
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
 </layout>
 

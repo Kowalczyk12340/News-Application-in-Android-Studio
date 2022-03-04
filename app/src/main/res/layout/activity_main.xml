@@ -4,7 +4,7 @@
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="pl.kalisz.ak.pup.marcin.newsapp" />
+            type="pl.kalisz.ak.pup.marcin.newsapp.viewmodels.MainViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -219,8 +219,6 @@
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
                                     android:textColor="@android:color/white"
                                     app:fontFamily="sans-serif-medium" />
-
-
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
@@ -384,7 +382,6 @@
                                         android:tint="@android:color/white"
                                         app:srcCompat="@drawable/shape_circle"
                                         tools:ignore="UseAppTint" />
-
                                     <ImageView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
@@ -393,9 +390,7 @@
                                         android:src="@drawable/ic_sports"
                                         android:tint="@color/red_300"
                                         tools:ignore="UseAppTint" />
-
                                 </RelativeLayout>
-
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -455,9 +450,7 @@
                                         android:src="@drawable/ic_technology"
                                         android:tint="@color/orange_300"
                                         tools:ignore="UseAppTint" />
-
                                 </RelativeLayout>
-
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -497,10 +490,7 @@
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
                         android:textColor="@android:color/black"
                         app:fontFamily="sans-serif-medium" />
-
-
                 </LinearLayout>
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
@@ -509,7 +499,6 @@
                     android:fillViewport="true"
                     android:scrollbars="vertical"
                     android:scrollingCache="true" />
-
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

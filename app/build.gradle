@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
 }
 
+apply plugin: 'com.jakewharton.butterknife'
+
 android {
     compileSdkVersion 31
     buildToolsVersion "31.0.0"
@@ -16,6 +18,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -27,7 +33,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     buildFeatures {
         dataBinding true
     }
@@ -37,9 +42,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
@@ -50,9 +53,6 @@ dependencies {
     //Extended library
     //Data Binding
     implementation 'android.arch.lifecycle:extensions:1.1.1'
-    //Gson
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation 'com.google.code.gson:gson:2.6.2'
     //ButterKnife
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'

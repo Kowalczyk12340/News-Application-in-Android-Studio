@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string-array name="countriesCodes">
-        <item>tr</item>
+        <item>pl</item>
         <item>id</item>
         <item>gb</item>
         <item>it</item>
         <item>de</item>
         <item>fr</item>
     </string-array>
-
     <integer-array name="countriesIcons">
         <item>@drawable/ic_poland</item>
         <item>@drawable/ic_indonesia</item>
@@ -18,7 +16,6 @@
         <item>@drawable/ic_germany</item>
         <item>@drawable/ic_france</item>
     </integer-array>
-
     <string-array name="countries">
         <item>Poland</item>
         <item>Indonesia</item>
@@ -27,5 +24,4 @@
         <item>Germany</item>
         <item>France</item>
     </string-array>
-
 </resources>
